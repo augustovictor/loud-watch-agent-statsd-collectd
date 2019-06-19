@@ -16,7 +16,8 @@ repositories {
 }
 
 dependencies {
-	compile("com.timgroup:java-statsd-client:3.0.2")
+
+	compile("com.datadoghq:java-dogstatsd-client:2.1.1")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
