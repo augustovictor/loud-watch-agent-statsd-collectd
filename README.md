@@ -12,7 +12,7 @@ java -jar build/libs/cloud-watch-agent-statsd-collectd-0.0.1-SNAPSHOT.jar
 
 ## Make a request
 ```bash
-curl -X POST -H 'Content-type: application/json' -i localhost:8080/v1/sales -d '{"items": ["Item 1", "Item 2", "Item 3"]}'
+curl -X POST -H 'Content-type: application/json' -i localhost:8080/v1/users/login -d '{"username": "custom_username", "password": "*******"}'
 ```
 
 ## Storage for our Jar file

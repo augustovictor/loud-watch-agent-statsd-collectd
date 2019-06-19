@@ -6,14 +6,15 @@ import org.springframework.http.HttpStatus.CREATED
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/v1/sales")
-class SalesController(private val statsdClient: NonBlockingStatsDClient) {
+@RequestMapping("/v1/users")
+class UserController(private val statsdClient: NonBlockingStatsDClient) {
     private val logger = LoggerFactory.getLogger(javaClass)
 
     @PostMapping
+    @RequestMapping("/login")
     @ResponseStatus(CREATED)
-    fun createSale(@RequestBody saleSchemaDTO: SaleSchemaDTO) {
-        logger.info(saleSchemaDTO.toString())
-        statsdClient.incrementCounter("sales.new")
+    fun login(@RequestBody loginSchemaDTO: LoginSchemaDTO) {
+        logger.info(loginSchemaDTO.toString())
+        statsdClient.increment("users.login")
     }
 }
