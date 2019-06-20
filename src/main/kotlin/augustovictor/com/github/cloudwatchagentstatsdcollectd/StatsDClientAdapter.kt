@@ -12,5 +12,5 @@ class StatsDClientAdapter(
         @Value("\${statsd.port}") val  statsdPort: String
 ) {
     @Bean
-    fun statsdClient() = NonBlockingStatsDClient(statsdPrefix, statsdHost, statsdPort.toInt())
+    fun configure() = NonBlockingStatsDClient(statsdPrefix, statsdHost, statsdPort.toInt())
 }
