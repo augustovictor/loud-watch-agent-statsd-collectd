@@ -1,6 +1,6 @@
 # cloud-watch-agent-statsd-collectd
 
-## Packaging the application
+## Packing the application
 ```bash
 ./gradlew bootJar
 ```
